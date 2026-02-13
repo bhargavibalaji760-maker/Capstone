@@ -1,0 +1,142 @@
+subject_id,hadm_id,conditions,medications
+82188,198890,Volvulus of intestine|Late eff infect dis NEC|Aphasia,5% Dextrose|0.9% Sodium Chloride (Mini Bag Plus)|5% Dextrose|0.9% Sodium Chloride|D5W
+21365,138441,Single lb in-hosp w/o cs|Preterm NEC 2000-2499g|Neonat jaund preterm del,D10W|Sodium Chloride|Potassium Chloride|NEO*IV*Ampicillin Sodium|Send 500mg Vial
+89179,127849,Convulsions NEC|Toxic encephalopathy|Urin tract infection NOS,LR|Potassium Chloride|Potassium Chloride|Potassium Chloride|Heparin Flush (10 units/ml)
+27069,121301,Acute respiratry failure|Secondary malig neo NEC|Ascites NEC,1/2 NS|LR|SW|Magnesium Sulfate|Docusate Sodium (Liquid)
+90642,101946,"AMI anterior wall, init|Cardiogenic shock|Hpt B chrn wo cm wo dlta",LR|Glycopyrrolate|Nitroglycerin|Neostigmine|Syringe
+90174,174359,Comp-oth vasc dev/graft|Food/vomit pneumonitis|Acute respiratry failure,Meropenem|Heparin Sodium|Phenytoin (Suspension)|OxycoDONE-Acetaminophen Elixir|Insulin
+88508,136928,Mal neo temporal lobe|Esophageal reflux|Migrne unsp wo ntrc mgrn,Bisacodyl|Senna|Soln.|Docusate Sodium (Liquid)|Oxycodone-Acetaminophen
+88508,134626,Mal neo temporal lobe|Hemorrhage complic proc|Cerebral edema,Sodium Chloride 0.9%  Flush|Fexofenadine|HYDROmorphone (Dilaudid)|Mannitol 20%|Soln.
+88508,166232,Mal neo temporal lobe|Disrup-external op wound|Gen cnv epil w/o intr ep,HYDROmorphone (Dilaudid)|Potassium Chloride|Potassium Chloride|OxycoDONE (Immediate Release) |Heparin
+87424,192833,CHF NOS|Hyposmolality|Mitral valve disorder,Atorvastatin|Docusate Sodium|Milk of Magnesia|Ketorolac|Magnesium Sulfate
+66706,147794,Poison-antipsychotic NEC|Pois-benzodiazepine tran|Toxic eff ethyl alcohol,Montelukast Sodium|Ipratropium Bromide Neb|Albuterol 0.083% Neb Soln|Sodium Chloride 0.9%  Flush|OxycoDONE (Immediate Release) 
+66706,170380,Mallory-weiss syndrome|Suicidal ideation|Bipol I cur depres NOS,Thiamine|Multivitamins|FoLIC Acid|Methocarbamol|ChlorproMAZINE
+82529,142927,End stage renal disease|Acute lung edema NOS|Acute respiratry failure,DiphenhydrAMINE|Acetaminophen|Heparin Flush (10 units/ml)|Ondansetron|MethylPREDNISolone Sodium Succ
+85050,145359,"Ac on chr syst hrt fail|Pneumonia, organism NOS|Acute kidney failure NOS",Nitroglycerin SL|Levofloxacin|Isosorbide Mononitrate (Extended Release)|Carvedilol|Potassium Chloride
+85050,107322,Food/vomit pneumonitis|Acute respiratry failure|Toxic encephalopathy,Potassium Phosphate|Potassium Phosphate|0.9% Sodium Chloride|0.9% Sodium Chloride|SW
+26871,186189,Mitral valve disorder|Surg compl-heart|Crnry athrscl natve vssl,Dextrose 50%|NS|D5W|D5W|Influenza Virus Vaccine
+18220,136624,Twin-mate lb-in hos w cs|Preterm NEC 1500-1749g|33-34 comp wks gestation,NEO*PO*Ferrous Sulfate Elixir|NEO*PO*Ferrous Sulfate Elixir
+11102,161335,Single lb in-hosp w cs|Extreme immatur 500-749g|25-26 comp wks gestation,NEO*SC*Phytonadione|Starter PN D10|NEO*IM*Pneumococcal 7-Valent|NEO*IV*Vancomycin|Syringe (Neonatal) *NS*
+7997,199840,Septicemia NOS|Urin tract infection NOS|Chr airway obstruct NEC,Sodium Bicarbonate|Phenylephrine HCl|Potassium Chloride|Hydrocortisone Na Succ.|Metronidazole
+6253,181271,Subarachnoid hemorrhage,Insulin|Codeine Sulfate|Phenytoin|Docusate Sodium|Acetaminophen
+9820,154186,CHF NOS|Acute respiratry failure|DMI renl nt st uncntrld,Furosemide|Labetalol HCl|Furosemide|Zolpidem Tartrate|Ferrous Sulfate
+21026,187960,Crnry athrscl natve vssl|Sleep apnea NOS|Pure hypercholesterolem,Atorvastatin|Furosemide|Ascorbic Acid|Ferrous Gluconate|Nabumetone
+10338,112182,Fracture of pubis-open|Subtrochanteric fx-close|Fx femur shaft-closed,Dolasetron Mesylate|D5 1/2NS|Heparin|Magnesium Sulfate|Potassium Chloride
+47362,149170,Ac ischemic hrt dis NEC|Trachea & bronch dis NEC|Hypertension NOS,Dexamethasone|Insulin Human Regular|Vial|Bag|Bag
+71184,168624,"AMI inferior wall, init|Chr syst/diastl hrt fail|Crnry athrscl natve vssl",Atropine Sulfate|Eptifibatide|Metoprolol Tartrate|SW|Potassium Chloride
+71184,137789,"AMI anterior wall, init|Comp-oth cardiac device|Chr systolic hrt failure",Warfarin|Heparin|Warfarin|Metoprolol Tartrate|Heparin
+19662,147551,Ventricular fibrillation|Convulsions NEC|Depress psychosis-unspec,Colchicine|Lorazepam|Duloxetine|Heparin Flush PICC (100 units/ml)|Lorazepam
+73967,129972,Crnry athrscl natve vssl|Ac on chr diast hrt fail|Acidosis,Fluoxetine|Sodium Chloride 0.9%  Flush|Aspirin|Aspirin|Lisinopril
+80847,129802,Subarachnoid hemorrhage|Cerebral edema|Compression of brain,NORepinephrine|PHENYLEPHrine|Vancomycin|Iso-Osmotic Dextrose|CefePIME
+80847,180618,Oth spcf deformity head|Cerebral edema|Speech disturbance NEC,Ondansetron|HydrALAzine|Senna|Bisacodyl|Bisacodyl
+26554,114613,Pois-arom analgesics NEC|Acute necrosis of liver|Poison-analgesics,D5W|Acetylcysteine (IV)|Lorazepam|Sodium Chloride 0.9%  Flush|Pantoprazole
+7784,118746,Oth spf gastrt w hmrhg|Alcohol cirrhosis liver|Ac alcohol intox-contin,Magnesium Sulfate|Thiamine HCl|Furosemide|Spironolactone|CefTRIAXone
+7784,157822,Aseptic necrosis femur|Alcohol cirrhosis liver|Alcoh dep NEC/NOS-unspec,SW|Potassium Chloride|D5W|HYDROmorphone (Dilaudid)|Lansoprazole Oral Disintegrating Tab
+81556,179659,Ac/subac bact endocard|Hpt B chrn wo cm wo dlta|Bacteremia,Metoprolol Tartrate|Iso-Osmotic Dextrose|Warfarin|Heparin Sodium|Furosemide
+6304,126719,"Ac myl leuk wo achv rmsn|Pneumonia, organism NOS|Atrial fibrillation",Neutra-Phos|Levofloxacin|Amiodarone HCl|Phytonadione|Phytonadione
+30643,118266,Single lb in-hosp w cs|Preterm NEC 2000-2499g|33-34 comp wks gestation,NEO*IM*Hepatitis B Vaccine
+25710,109429,Intracerebral hemorrhage|CHF NOS|Heart valve replac NEC,Hydralazine HCl|Zolpidem Tartrate|Aspirin|Insulin|Metoprolol
+70420,133534,Subarachnoid hemorrhage|Nonpyogenic meningitis|Obstructiv hydrocephalus,Phenytoin Sodium|0.9% Sodium Chloride|Acetaminophen|Morphine Sulfate|5% Dextrose
+2881,190994,Fracture calcaneus-open|Fx orbital floor-closed|Fx malar/maxillary-close,Cefazolin|Morphine Sulfate|Iso-Osmotic Dextrose|Morphine Sulfate|Morphine Sulfate
+12672,151708,Single lb in-hosp w cs|Respiratory distress syn|Neonat jaund preterm del,Syringe (Neonatal) *D5W*|NEO*IV*Ampicillin Sodium|NEO*IV*Gentamicin|Send 500mg Vial|Sodium Chloride
+52271,130579,Ac diastolic hrt failure|Acute respiratry failure|Pericardial disease NOS,Sodium Chloride 0.9%  Flush|Insulin|Insulin|Sodium Chloride 0.9%  Flush|Lisinopril
+22053,117948,Single lb in-hosp w/o cs|Preterm NEC 2000-2499g|Neonat jaund preterm del,Sodium Chloride|Potassium Chloride|D10W|Potassium Chloride|D10W
+18781,152814,Parox ventric tachycard|Chr airway obstruct NEC|Hyp kid NOS w cr kid V,Acetylcysteine 20%|Acetaminophen|Lisinopril|Oxycodone-Acetaminophen|Bisacodyl
+25904,155093,Malig neo cervix NEC|Mal neo lymph-intrapelv|Septic shock,Voriconazole|Voriconazole|Magnesium Oxide|NS|NS
+448,125279,Ocl mlt bi art wo infrct|Hematoma complic proc|Surg comp nerv systm NEC,NS|D5W|Ondansetron|D5W|Phenylephrine HCl
+30937,154101,Twin-mate lb-in hos w cs|Respiratory distress syn|Primary apnea of newborn,Send 500mg Vial|Potassium Chloride|Sodium Chloride|NEO*IV*Gentamicin|Ampicillin Sodium
+25103,167323,"AMI inferior wall, init|Parox ventric tachycard|Syst lupus erythematosus",Ketorolac|Humulin-R Insulin|Phenylephrine HCl|Vancomycin HCl|Potassium Chloride
+2312,153254,Twin-mate lb-hosp w/o cs|Preterm NEC 1750-1999g|Cong pulmon valve stenos,NEO*IV*Ampicillin Sodium|Syringe (Neonatal) *D5W*|Send 500mg Vial|NEO*IV*Gentamicin|Sodium Chloride
+46733,170387,Empyema with fistula|Pneum in aspergillosis|Aspergillosis,HYDROmorphone (Dilaudid)|Calcium Gluconate|Calcium Gluconate|Calcium Gluconate|Fentanyl Citrate
+46733,142215,Empyema with fistula|Aspergillosis|Depressive disorder NEC,Lactulose|Sodium Chloride 0.9%  Flush|Glucagon|Dextrose 50%|Lorazepam
+19613,144918,"AMI anterior wall, init|Crnry athrscl natve vssl|Epistaxis",Sodium Chloride 0.9%  Flush|Senna|Nicotine Patch|Nicotine Patch|Atropine Sulfate
+11367,184977,Twin-mate lb-in hos w cs|Extreme immatur 500-749g|Respiratory distress syn,Vitamin A|Syringe (Neonatal)|Sterile Water|Sodium Acetate|Heparin (Preservative Free)
+88982,114082,"Aortic valve disorder|Ac kidny fail, tubr necr|Delirium d/t other cond",Dipyridamole-Aspirin|Docusate Sodium|Aspirin EC|5% Dextrose (EXCEL BAG)|5% Dextrose (EXCEL BAG)
+58855,149991,Subdural hemorrhage|Compression of brain|Antin chemo indcd pancyt,Influenza Virus Vaccine|Pneumococcal Vac Polyvalent|OxycoDONE (Immediate Release) |Potassium Chloride|0.9% Sodium Chloride
+24473,116834,Single lb in-hosp w cs|Neonat jaund preterm del|Preterm NEC 1250-1499g,Starter PN D10|Heparin Flush|NEO*IV*Gentamicin|Ampicillin Sodium|Syringe (Neonatal) *D5W*
+4531,137955,Single lb in-hosp w cs|NB obsrv suspct infect|Routine circumcision,Send 500mg Vial|NEO*IV*Gentamicin|NEO*IV*AMPicillin Sodium|Syringe (Neonatal) *D5W*
+28479,108885,Ath ext ntv art gngrene|Comp-oth vasc dev/graft|Ac posthemorrhag anemia,Olanzapine (Disintegrating Tablet)|Pantoprazole Sodium|Aspirin|NS|Potassium Chl 40 mEq / 1000 mL D5 1/2 NS
+26195,116970,Crnry athrscl natve vssl|Intermed coronary synd|Hypertension NOS,Neostigmine|Vancomycin HCl|Humulin-R Insulin|Potassium Chloride|Phenylephrine HCl
+2109,121458,Subdural hemorrhage|Renal & ureteral dis NOS|Pure hypercholesterolem,NS (Glass Bottle)|Desmopressin Acetate|Midazolam HCl|Fentanyl Citrate|Nitroprusside Sodium
+606,120467,Subarachnoid hemorrhage|Bone & cartilage dis NOS,Magnesium Sulfate|NS|Nimodipine|LR|LR
+3867,140636,Coagulat defect NEC/NOS|Ac posthemorrhag anemia|Sec mal neo peritoneum,Oxycodone-Acetaminophen|Sevelamer|Dolasetron Mesylate|Phytonadione|traZODONE HCl
+32039,184831,"CHF NOS|Subendo infarct, initial|Cardiogenic shock",Insulin|D5W|Valsartan|Chlorothiazide Sodium|D5W
+87868,171672,"MRSA septicemia|Ac kidny fail, tubr necr|Osteomyelitis NOS-ankle",LR|0.9% Sodium Chloride|0.9% Sodium Chloride|Sodium Chloride 0.9%  Flush|Acetaminophen
+51605,101096,Alcohol withdrawal|Ac alcohol intox-contin|Cocaine depend-contin,D5NS|Diazepam|Diazepam|Haloperidol|Haloperidol
+41487,147276,Crnry athrscl natve vssl|Angina pectoris NEC/NOS|Hyperlipidemia NEC/NOS,Aspirin EC|Bisacodyl|Milk of Magnesia|Acetaminophen|Sodium Chloride 0.9%  Flush
+84324,114377,Loc osteoarth NOS-l/leg|Hypogammaglobulinem NOS|Long QT syndrome,Syringe (NS)|Bumetanide|Darvocet-N 100|HYDROmorphone (Dilaudid)|Acetaminophen
+14424,193526,Single lb in-hosp w/o cs|Primary apnea of newborn|Preterm NEC 1500-1749g,D10W|Potassium Chloride|NEO*IV*Gentamicin|Syringe (Neonatal) *D5W*|Sodium Chloride
+10444,182552,Streptococcal septicemia|Toxic shock syndrome|Ac/subac bact endocard,Divalproex Sodium|Heparin Flush PICC (100 units/ml)|Divalproex Sod. Sprinkles|D5W|Clindamycin
+28906,102876,"CHF NOS|Pneumonia, organism NOS|Acute kidney failure NOS",Fluticasone Propionate 110mcg|Lactulose|GlipiZIDE|Diltiazem|Magnesium Sulfate
+52054,111469,Hyp ht/kd NOS I-IV w hf|Ac on chr diast hrt fail|Ventricular sept defect,Isosorbide Mononitrate (Extended Release)|Senna|Docusate Sodium (Liquid)|Heparin|Timolol Maleate 0.25%
+58028,177025,Hyp ht dis NOS w ht fail|Chr diastolic hrt fail|CHF NOS,Insulin|Insulin|Insulin|Furosemide|Potassium Chloride
+1472,161232,Secondary malig neo lung|Second malig neo pleura|Second malig neo liver,Sodium Chloride 0.9%  Flush|Warfarin|Moexipril HCl|D5W|D5W
+9611,122449,Acute necrosis of liver|Shock w/o trauma NEC|Gastrointest hemorr NOS,Neutra-Phos|Diazepam|Insulin|NS|Lactulose
+12670,158994,Cl skull vlt fx-brf coma|Alcohol abuse-unspec|Cerebrospinal rhinorrhea,Potassium Phosphate|NS|NS|NS|Lorazepam
+56375,176768,"Pois-coronary vasodilat|Ac kidny fail, tubr necr|Acidosis",5% Dextrose|Sodium Bicarbonate|5% Dextrose|Fat Emulsion 20%|Fat Emulsion 20%
+9876,182597,Chronic pancreatitis|Iatrogenc hypotnsion NEC|Hypertension NOS,DiphenhydrAMINE HCl|Heparin Flush CVL  (100 units/ml)|NS|Calcium Gluconate|Magnesium Sulfate
+17034,116721,Convulsions NEC|Opioid abuse-unspec|Chrnc hpt C wo hpat coma,Levofloxacin|Dextrose 5%|Propofol|Propofol|HydrALAZINE HCl
+81661,198842,Ac/chr syst/dia hrt fail|End stage renal disease|Hyp kid NOS w cr kid V,Metoprolol Tartrate|Lisinopril|Metoprolol Tartrate|HydrALAzine|Acetaminophen
+5979,116716,Venous insufficiency NOS|Acute kidney failure NOS|Cellulitis of leg,Atenolol|Atenolol|Magnesium Sulfate|Potassium Phosphate|D5 1/2NS
+5979,198678,Acute respiratry failure|Alcohol withdrawal|Acute kidney failure NOS,FoLIC Acid|Pantoprazole|Magnesium Sulfate|SW|Potassium Chloride
+6448,197720,Ch obst asth w (ac) exac|Hypoxemia|CHF NOS,Simethicone|Lorazepam|Furosemide|Phenaseptic Throat Spray|Warfarin
+6448,116629,Ac on chr diast hrt fail|Schizoaffective dis NOS|Obs chr bronc w(ac) exac,Albuterol 0.083% Neb Soln|Ipratropium Bromide Neb|Isosorbide Mononitrate (Extended Release)|Furosemide|D5W
+6448,134410,Acute respiratry failure|Mal hy kid w cr kid I-IV|Ac on chr diast hrt fail,CeftriaXONE|Iso-Osmotic Dextrose|Furosemide|HydrALAzine|Lorazepam
+57614,115745,Ac diastolic hrt failure|Liver transplant status|Kidney transplant status,Furosemide|NIFEdipine CR|Furosemide|Insulin|Insulin
+2553,126138,Acute necrosis of liver|Chrnc hpt C w hepat Coma|Alcohol cirrhosis liver,NS|Potassium Chloride|D5W|Desmopressin Acetate|Acetaminophen
+63098,191315,"Abdom aortic aneurysm|Ac kidny fail, tubr necr|Surg comp-peri vasc syst",Potassium Chl 20 mEq / 1000 mL D5 1/2 NS|Metoprolol Tartrate|Lidocaine Jelly 2% (Urojet)|Golytely|5% Dextrose
+67843,151004,Intracerebral hemorrhage|Muscskel sympt limb NEC|Hypertension NOS,Hydrochlorothiazide|Amlodipine|Lisinopril|0.9% Sodium Chloride|Famotidine
+42776,159027,Autonomic nerve dis NEC|Acute kidney failure NOS|Ulcer esophagus w bleed,Morphine Sulfate|DiphenhydrAMINE|Lisinopril|Morphine Sulfate|Morphine Sulfate
+53771,130895,Meth susc Staph aur sept|Ac/subac bact endocard|Purulent endophthalm NOS,Ibuprofen|Nafcillin|Iso-Osmotic Dextrose|Prochlorperazine|Zolpidem Tartrate
+24793,136281,"AMI NEC, initial|Comp-oth cardiac device|Chr airway obstruct NEC",Albuterol-Ipratropium|Oxycodone-Acetaminophen|Morphine Sulfate|Metoclopramide|Acetaminophen
+98229,149609,"Acute respiratry failure|Pneumonia, organism NOS|Ch obst asth w (ac) exac",Potassium Chloride|SW|Bisacodyl|Potassium Chloride|MethylPREDNISolone Sodium Succ
+16617,127046,"AMI anterior wall, init|Parox ventric tachycard|CHF NOS",Enoxaparin Sodium|Enoxaparin Sodium|Enoxaparin Sodium|Captopril|Magnesium Sulfate
+29709,195112,Single lb in-hosp w/o cs|Routine circumcision,NEO*IM*Hepatitis B Vaccine|Acetaminophen (Liquid)
+96321,162131,Mch cmp autm mplnt dfbrl|Acute kidney failure NOS|Parox ventric tachycard,Heparin|Potassium Chloride|Carbidopa-Levodopa (25-100)|Tamsulosin|Acetaminophen
+5974,144848,Single lb in-hosp w/o cs|Neonat jaund preterm del|Neonatal dehydration,D10W|Heparin (Preservative Free)|Sodium Chloride|Potassium Chloride|D10W
+46801,176093,Gall&bil cal w/ac w/o ob|Septic shock|Septicemia NOS,HYDROmorphone (Dilaudid)|D5 1/2NS|Heparin|D5 1/2NS|Amiodarone
+88008,146341,Intracranial hemorr NOS|Meningitis NOS|Obstructiv hydrocephalus,SW|0.9% Sodium Chloride|Potassium Chloride|Potassium Chloride|Potassium Chloride
+88008,174892,Sec mal neo brain/spine|Intracerebral hemorrhage|Compression of brain,Pantoprazole|Acetaminophen|Acetaminophen|Docusate Sodium|0.9% Sodium Chloride
+16451,164789,"Subendo infarct, initial|Crnry athrscl natve vssl|DMII wo cmp nt st uncntr",D5W|Insulin|Heparin Sodium|Furosemide|Humulin-R Insulin
+50007,117512,Septicemia NOS|Acute respiratry failure|Cellulitis of leg,Sodium Chloride 0.9%  Flush|Docusate Sodium|Sodium Chloride 0.9%  Flush|Bisacodyl|Bisacodyl
+7787,138438,Accidental op laceration|Retention urine NOS|DMII wo cmp nt st uncntr,Insulin|Phenazopyridine HCl|Oxybutynin|DiphenhydrAMINE HCl|Morphine Sulfate
+7787,162965,"Bladder rupt, nontraum|Suppurat peritonitis NEC|Pneumonia, organism NOS",Sodium Bicarbonate|Sodium Bicarbonate|Sodium Bicarbonate|D5W|D5W
+7787,192259,Alcohol cirrhosis liver|Ac DVT/emb prox low ext|Int inf clstrdium dfcile,Albumin 25% (12.5 g)|Furosemide|Spironolactone|Clindamycin|Metronidazole
+11811,183795,Malig neo pancreas NEC|Secondary malig neo lung|Second malig neo liver,Vial|Pantoprazole Sodium|Simvastatin|Sodium Chloride 0.9%  Flush|Ezetimibe
+18051,163453,Single lb in-hosp w/o cs|NB obsrv suspct infect|Need prphyl vc vrl hepat,NEO*IV*Ampicillin Sodium|Syringe (Neonatal) *D5W*|Send 500mg Vial|NEO*IV*Gentamicin
+5165,163931,Crnry athrscl natve vssl|Comp-oth cardiac device|Angina pectoris NEC/NOS,Sucralfate|Neostigmine|Syringe|Syringe|Syringe
+93211,125085,Necrotizing fasciitis|Cellulitis of hand|Open wound finger-compl,Sodium Chloride 0.9%  Flush|Potassium Chl 20 mEq / 1000 mL D5 1/2 NS|Heparin Flush (10 units/ml)|Doxycycline Hyclate|Vancomycin
+29871,185186,Crnry athrscl natve vssl|Thrombocytopenia NOS|Intermed coronary synd,Neostigmine|Calcium Gluconate|Magnesium Sulfate|Meperidine|Morphine Sulfate
+84822,153359,Bacterial pneumonia NOS|Acute respiratry failure|Tumor lysis syndrome,Potassium Chloride|Phytonadione|Vancomycin|CefePIME|Iso-Osmotic Dextrose
+12001,173927,Intracerebral hemorrhage|Urin tract infection NOS|Alzheimer's disease,Magnesium Sulfate|Dextrose 5%|Levofloxacin|NS|NS
+5135,118259,Cl skl base fx/menin hem|Pulmonary collapse|Fracture six ribs-closed,Insulin|Calcium Gluconate|Metoprolol|Magnesium Sulfate|SW
+42131,199967,Ocl bslr art w infrct|Chr pulmon heart dis NEC|Emphysema NEC,Potassium Chloride|Potassium Chloride|Potassium Phosphate|Potassium Phosphate|Bag
+56418,102558,Asphyxiation/strangulat|Injury-hanging|Asymp hiv infectn status,Propofol|Iso-Osmotic Sodium Chloride|Propofol|Famotidine|Fentanyl Citrate
+10602,107955,Compl lung transplant|Food/vomit pneumonitis|Cystic fibros w/o ileus,Potassium Chloride|Propofol (Generic)|Potassium Chloride|Magnesium Sulfate|Diphenhydramine HCl
+84247,168463,"Ocl crtd art w infrct|Unsp hemiplga unspf side|Dysphagia, oral phase",1/2 NS|HydrALAzine|Olanzapine (Disintegrating Tablet)|1/2 NS|Sodium Bicarbonate
+60104,140707,"Hpt C w/o hepat coma NOS|Food/vomit pneumonitis|Mal neo liver, primary",Tacrolimus Suspension|Furosemide|Insulin|Furosemide|Bisacodyl
+60104,112160,Other postop infection|Acute kidney failure NOS|Cellulitis of trunk,Morphine Sulfate|Methadone|Amikacin|Tigecycline|Amikacin
+60104,115146,Oth/uns inf-cen ven cath|Shock w/o trauma NEC|Oliguria & anuria,Bag|Prismasate (B32 K2)|Albumin 25% (12.5g / 50mL)|Insulin|Insulin
+61998,176304,Epilep NEC w/o intr epil|Acute respiratry failure|Alcohol withdrawal,Diazepam|Potassium Chloride|Potassium Chloride|Calcium Gluconate|Magnesium Sulfate
+2274,127684,Pois-propionic acid derv|Convulsions NEC|Acidosis,Clozapine|NS (Glass Bottle)|NS|Potassium Chloride|Fluphenazine
+72154,145999,Aortic valve disorder|Parox ventric tachycard|Iatrogenic pneumothorax,Oxycodone-Acetaminophen|Glycopyrrolate|Nitroglycerin|Propofol|Sodium Chloride 0.9%  Flush
+71191,181302,Crnry athrscl natve vssl|Myalgia and myositis NOS|Hyperlipidemia NEC/NOS,Inderal LA|Prilosec|triamterene-hydrochlorothiazid|Lescol XL|Sodium Chloride 0.9%  Flush
+2150,189980,Benign neoplasm kidney|Hemoperitoneum|CHF NOS,Insulin|Morphine Sulfate|Morphine Sulfate|LR|Furosemide
+2150,166242,Benign neoplasm kidney|Hemoperitoneum|Chr diastolic hrt fail,Iso-Osmotic Dextrose|Potassium Chl 20 mEq / 1000 mL D5 1/2 NS|Cefazolin|Famotidine|Hydromorphone P.F.
+31860,177493,Preterm NEC 2000-2499g|Respiratory distress syn|NB septicemia [sepsis],NEO*IV*Gentamicin|Send 500mg Vial|Syringe (Neonatal) *D5W*|Ampicillin Sodium|Sodium Chloride
+81543,172553,"Celiac disease|Pneumonia, organism NOS|End stage renal disease",Sevelamer|Omeprazole|traZODONE|Docusate Sodium|Senna
+81543,117993,"Hyp kid NOS w cr kid V|End stage renal disease|Subendo infarct, initial",Sulfameth/Trimethoprim SS|Mycophenolate Mofetil|Nystatin Oral Suspension|Tacrolimus|ValGANCIclovir
+81543,198462,CHF NOS|DMI ketoacd uncontrold|Acute nephritis NOS,Furosemide|Isosorbide Mononitrate (Extended Release)|Insulin Human Regular|Tacrolimus|Dextrose 20% in Water (D20W)
+81543,186026,Oth spf gastrt w hmrhg|Acute nephritis NEC|Compl kidney transplant,Metoprolol Tartrate|Insulin|Insulin|Insulin|Potassium Chl 20 mEq / 1000 mL D5 1/2 NS
+81543,177374,DMI ketoacd uncontrold|Kidney transplant status|Ulcer oth part low limb,Acetaminophen|Tacrolimus|Pentamidine-Inhalation|Tacrolimus|Insulin
+81543,173583,"Cerv spondyl w myelopath|Ac kidny fail, tubr necr|Pneumonia, organism NOS",Loperamide|Ferrous Sulfate|Insulin|5% Dextrose|Vancomycin
+10874,117219,Mitral valve disorder|Surg compl-heart|Atrial fibrillation,Ipratropium Bromide Neb|Tamsulosin HCl|Warfarin|Furosemide|Albuterol 0.083% Neb Soln
+262,106019,Prim cardiomyopathy NEC|Chr airway obstruct NEC|Thalassemia NEC,Valsartan|Verapamil SR|Aspirin EC|Metoprolol XL|Verapamil SR
+23236,177328,Streptococcal septicemia|Peritonitis NEC|Intestinal adhes w obstr,CefTRIAXone|Iso-Osmotic Dextrose|NS|NS|NS (Mini Bag Plus)
+31319,126535,CHF NOS|Parox ventric tachycard|Cardiac arrest,D5W|Norepinephrine|Midazolam|Furosemide|NS
+90176,118649,Brain inj NEC-coma NOS|Encephalopathy NOS|Fx mult ribs NOS-closed,Docusate Sodium|Docusate Sodium|FoLIC Acid|Thiamine|Fexofenadine
+13252,146339,"AMI NOS, initial|Ventricular fibrillation|Prinzmetal angina",Isosorbide Dinitrate|1/2 NS|SW|Isosorbide Dinitrate|Heparin
+13252,105012,"Ventricular fibrillation|AMI NOS, initial|Anoxic brain damage",D5W|Vasopressin|Methylprednisolone Na Succ|Amiodarone HCl|DopAmine
+63619,134917,Oth spf gastrt w hmrhg|Ac posthemorrhag anemia|Chr pulmon heart dis NEC,1/2 NS|0.9% Sodium Chloride|Erythromycin|Fentanyl Citrate|Midazolam
+65558,174246,"Acute pancreatitis|Acute respiratry failure|Ac kidny fail, tubr necr",Albuterol Inhaler|Albuterol 0.083% Neb Soln|Potassium Chl 20 mEq / 1000 mL D5 1/2 NS|Heparin|Heparin Flush (10 units/ml)
+65558,104521,"Thrombocytopenia NOS|Pressure ulcer,unstagebl|Gram-neg septicemia NOS",Bag|Bag|5% Dextrose|5% Dextrose|Albuterol 0.083% Neb Soln

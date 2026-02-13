@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+streamlit
+pandas
+sqlalchemy
+pydantic
+requests
+python-multipart
+plotly
+psycopg2-binary
+PyPDF2
+langchain
+langchain-huggingface
+python-dotenv
