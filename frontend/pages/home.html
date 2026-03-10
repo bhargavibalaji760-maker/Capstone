@@ -1,0 +1,301 @@
+{% extends "partials/base.html" %}
+
+{% block title %}Home - MediTrial AI{% endblock %}
+{% block active_page %}home{% endblock %}
+
+{% block content %}
+
+<style>
+    /* =============================
+   HERO SECTION
+============================= */
+
+    .home-hero {
+        position: relative;
+        padding: 80px 60px;
+        border-radius: var(--radius);
+        background: linear-gradient(145deg,
+                rgba(255, 255, 255, 0.04),
+                rgba(255, 255, 255, 0.015));
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(var(--blur));
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .home-hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+        animation: rotate-gradient 15s linear infinite;
+        z-index: -1;
+    }
+
+    @keyframes rotate-gradient {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hero-title {
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.15;
+    }
+
+    .hero-title span {
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtext {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        max-width: 600px;
+    }
+
+    .metric-box {
+        display: flex;
+        gap: 60px;
+        margin-top: 40px;
+    }
+
+    .metric-value {
+        font-size: 2.8rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        color: var(--accent);
+    }
+
+    .metric-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+    }
+
+    /* =============================
+   PILLARS
+============================= */
+
+    .pillar-card {
+        padding: 40px;
+        border-radius: var(--radius);
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(var(--blur));
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        height: 100%;
+    }
+
+    .pillar-card:hover {
+        border-color: rgba(14, 165, 233, 0.6);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15);
+    }
+
+    .pillar-icon {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .pillar-title {
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .pillar-text {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+
+    /* =============================
+   CTA BLOCK
+============================= */
+
+    .cta-block {
+        padding: 70px;
+        border-radius: var(--radius);
+        background: linear-gradient(135deg,
+                rgba(14, 165, 233, 0.08),
+                rgba(37, 99, 235, 0.05));
+        border: 1px solid rgba(14, 165, 233, 0.2);
+        text-align: center;
+    }
+
+    .cta-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        color: var(--text-secondary);
+        margin-bottom: 40px;
+    }
+
+    .section-spacing {
+        margin-top: 80px;
+    }
+
+    .hero-brain-animation {
+        animation: float-brain 4s ease-in-out infinite;
+    }
+
+    @keyframes float-brain {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .btn-primary {
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+        transform: translateY(-2px);
+    }
+</style>
+
+<!-- ================= HEADER ================= -->
+<div class="topbar mb-5">
+    <h1 class="fw-bold text-serif">Core Intelligence Platform</h1>
+    <p class="text-secondary small text-uppercase tracking-wide">
+        Autonomous Clinical Orchestration Engine
+    </p>
+</div>
+
+<!-- ================= HERO ================= -->
+<div class="home-hero mb-5">
+    <div class="row align-items-center">
+
+        <div class="col-lg-7">
+            <div class="hero-title mb-4">
+                Precision Matching.<br>
+                <span></span>
+            </div>
+
+            <div class="hero-subtext mb-4">
+                MediTrial AI leverages a custom-tuned architecture to convert unstructured medical protocols
+                into structured eligibility logic. This eliminates recruitment inefficiencies while maintaining full
+                clinical explainability.
+            </div>
+
+            <div class="metric-box">
+                <div>
+                    <div class="metric-value">94%</div>
+                    <div class="metric-label">Matching Accuracy</div>
+                </div>
+                <div>
+                    <div class="metric-value">2.4s</div>
+                    <div class="metric-label">Protocol Analysis</div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <a href="/matches" class="btn btn-primary px-5">
+                    Launch Matching Engine
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+            <div class="hero-brain-animation" style="
+                width: 260px;
+                height: 260px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(14,165,233,0.3), transparent 70%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                color: var(--accent);
+                box-shadow: 0 0 80px rgba(14,165,233,0.25);
+            ">
+                <i class="fas fa-brain"></i>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= CORE PILLARS ================= -->
+<div class="row g-4 section-spacing">
+
+    <div class="col-md-4">
+        <div class="pillar-card">
+            <div class="pillar-icon text-accent">
+                <i class="fas fa-wave-square"></i>
+            </div>
+            <div class="pillar-title">Hybrid Extraction</div>
+            <div class="pillar-text">
+                Combines rule-based NLP with LLM reasoning to extract structured eligibility criteria from unformatted
+                clinical PDFs with sub-metric precision.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="pillar-card">
+            <div class="pillar-icon text-success">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="pillar-title">Recruitment Intelligence</div>
+            <div class="pillar-text">
+                Provides real-time patient-trial alignment analytics, enabling research teams to prioritize
+                high-confidence enrollments instantly.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="pillar-card">
+            <div class="pillar-icon text-warning">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+            <div class="pillar-title">Governance & Explainability</div>
+            <div class="pillar-text">
+                Every AI decision is traceable. Each alignment score is backed by structured evidence and clinical
+                reasoning documentation.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= CTA ================= -->
+<div class="cta-block section-spacing">
+    <div class="cta-title">
+        Accelerate Clinical Discovery
+    </div>
+    <div class="cta-text">
+        Access the full MediTrial orchestration suite — analytics, patient registry, and autonomous matching.
+    </div>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="/dashboard" class="btn btn-secondary px-5">View Analytics</a>
+        <a href="/patients" class="btn btn-primary px-5">Open Registry</a>
+    </div>
+</div>
+
+{% endblock %}

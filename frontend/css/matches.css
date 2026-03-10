@@ -1,0 +1,98 @@
+/* Matching engine specific styles */
+.command-bar-custom {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 40px;
+    backdrop-filter: blur(var(--blur-std));
+}
+
+.input-box {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+    cursor: pointer; 
+    transition: 0.2s ease;
+}
+
+.input-box:hover { 
+    border-color: var(--accent); 
+    background: rgba(255,255,255,0.05); 
+}
+
+.logic-panel { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 24px; 
+    margin-bottom: 40px; 
+}
+
+.criteria-box-custom {
+    background: var(--bg-card); 
+    border: 1px solid var(--glass-border);
+    border-radius: 12px; 
+    padding: 24px; 
+    backdrop-filter: blur(var(--blur-std));
+}
+
+.grid-header {
+    display: grid; 
+    grid-template-columns: 2.2fr 0.8fr 2.5fr 1fr 1fr;
+    padding: 12px 24px; 
+    font-size: 11px; 
+    font-weight: 700;
+    color: var(--text-secondary); 
+    text-transform: uppercase; 
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid var(--glass-border);
+}
+
+.grid-row-custom {
+    display: grid; 
+    grid-template-columns: 2.2fr 0.8fr 2.5fr 1fr 1fr;
+    padding: 24px; 
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--glass-border);
+    align-items: center; 
+    transition: 0.2s ease;
+}
+
+.grid-row-custom:hover { 
+    background: rgba(255,255,255,0.05); 
+    transform: translateX(4px); 
+    border-color: var(--accent); 
+}
+
+.criteria-list-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.criteria-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    padding-bottom: 8px;
+}
+
+.criteria-item:last-child { border-bottom: none; }
+.criteria-item i { margin-top: 4px; font-size: 0.7rem; color: var(--accent); }
+.italic { font-style: italic; }
+.badge-accent { background: var(--accent); color: white; }

@@ -1,0 +1,140 @@
+﻿{% extends "partials/base.html" %}
+
+{% block title %}Dashboard - MediTrial AI{% endblock %}
+{% block active_page %}dashboard{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="/css/dashboard.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= HEADER ================= -->
+<div class="dashboard-header">
+    <div>
+        <h1 class="dashboard-title text-serif">Intelligence Dashboard</h1>
+        <p class="dashboard-subtitle">
+            Autonomous Clinical Orchestration Monitoring
+        </p>
+    </div>
+
+    <div class="system-status">
+        <span class="live-dot"></span>
+        Neural Interface Online
+    </div>
+</div>
+
+
+<!-- ================= METRIC GRID ================= -->
+<div class="dashboard-metrics mb-5">
+
+    <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-user-injured"></i></div>
+        <div class="metric-number" id="totalPatients">--</div>
+        <div class="metric-label">Total Subjects Indexed</div>
+    </div>
+
+    <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-flask"></i></div>
+        <div class="metric-number" id="totalTrials">--</div>
+        <div class="metric-label">Active Registry Protocols</div>
+    </div>
+
+    <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-link"></i></div>
+        <div class="metric-number" id="totalMatches">--</div>
+        <div class="metric-label">Validated AI Matches</div>
+    </div>
+
+    <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-percentage"></i></div>
+        <div class="metric-number" id="avgScore">--</div>
+        <div class="metric-label">Mean Confidence Factor</div>
+    </div>
+
+</div>
+
+
+<!-- ================= DATA PANELS ================= -->
+<div class="row g-4 mb-5">
+
+    <!-- Patients -->
+    <div class="col-lg-6">
+        <div class="panel-card">
+            <div class="panel-header">
+                <h6>Recent Subject Registrations</h6>
+                <a href="/patients">Browse All</a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-dark-custom mb-0">
+                    <thead>
+                        <tr>
+                            <th>Subject Identifier</th>
+                            <th>Age</th>
+                            <th>Clinical Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentPatientsTable">
+                        <tr>
+                            <td colspan="3" class="text-center py-4 text-muted">
+                                Awaiting stream...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trials -->
+    <div class="col-lg-6">
+        <div class="panel-card">
+            <div class="panel-header">
+                <h6>Active Protocols Feed</h6>
+                <a href="/trials">Full Registry</a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-dark-custom mb-0">
+                    <thead>
+                        <tr>
+                            <th>Trial Title</th>
+                            <th>Phase</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTrialsTable">
+                        <tr>
+                            <td colspan="3" class="text-center py-4 text-muted">
+                                Synchronizing...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ================= QUICK COMMAND CENTER ================= -->
+<div class="panel-card command-center">
+    <div class="panel-header">
+        <h6>Quick Command Center</h6>
+    </div>
+
+    <div class="command-actions">
+        <a href="/patients"><i class="fas fa-user-plus"></i> Register Patient</a>
+        <a href="/trials"><i class="fas fa-file-medical"></i> Upload Protocol</a>
+        <a href="/matches"><i class="fas fa-microchip"></i> Compute Matches</a>
+        <a href="/docs" target="_blank"><i class="fas fa-terminal"></i> Developer API</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="/js/dashboard.js"></script>
+{% endblock %}

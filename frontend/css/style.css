@@ -1,0 +1,512 @@
+﻿/* =========================================================
+   MEDITRIAL AI — ENTERPRISE CORE SYSTEM
+   Stable Production Base
+   ========================================================= */
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap');
+
+/* =========================================================
+   ROOT TOKENS
+   ========================================================= */
+
+:root {
+
+    /* Core Background */
+    --bg-primary: #0f172a;
+    --bg-secondary: #0a0c10;
+    --bg-surface: #121826;
+
+    /* Glass System */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+
+    /* Accent */
+    --accent: #0ea5e9;
+    --accent-hover: #0284c7;
+    --accent-soft: rgba(14, 165, 233, 0.1);
+    --accent-gradient: linear-gradient(135deg, #0ea5e9, #2563eb);
+
+    /* Status */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    /* Typography */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Layout */
+    --sidebar-width: 260px;
+    --radius: 12px;
+    --radius-pill: 100px;
+    --ui-height: 48px;
+
+    /* Effects */
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --blur: 16px;
+
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-sans);
+    background:
+        radial-gradient(circle at 50% -20%, rgba(14, 165, 233, 0.08), transparent 60%),
+        var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbars Hidden (Clean Enterprise Look) */
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* =========================================================
+   CORE LAYOUT
+   ========================================================= */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--glass-border);
+    position: fixed;
+    height: 100vh;
+    padding: 32px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 60px;
+    flex: 1;
+    background: transparent;
+}
+
+/* =========================================================
+   SIDEBAR SYSTEM
+   ========================================================= */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 6px;
+    transition: 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+}
+
+.sidebar-nav a.active {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* =========================================================
+   PAGE LOADER
+   ========================================================= */
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-secondary);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+body:not(.loaded) .page-loader {
+    visibility: visible;
+    opacity: 1;
+}
+
+.loader-logo {
+    font-size: 2.2rem;
+    animation: spin 2s linear infinite;
+    color: var(--accent);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   GLASS CARD SYSTEM
+   ========================================================= */
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--blur));
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(14, 165, 233, 0.4);
+    transform: translateY(-4px);
+}
+
+/* =========================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================= */
+
+.text-serif {
+    font-family: var(--font-serif);
+}
+
+.text-mono {
+    font-family: var(--font-mono);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.tracking-wide {
+    letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   BUTTON SYSTEM
+   ========================================================= */
+
+.btn {
+    height: var(--ui-height);
+    border-radius: var(--radius);
+    padding: 0 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    color: white;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-link {
+    background: transparent;
+    color: var(--accent);
+    height: auto;
+    padding: 0;
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+}
+
+.btn-accent:hover:not(:disabled) {
+    background: var(--accent-hover);
+    color: #fff;
+}
+
+.btn-accent:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-outline-accent {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+/* PDF upload zone progress bar accent color */
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+
+/* =========================================================
+   FORM SYSTEM
+   ========================================================= */
+
+.form-control,
+.form-select {
+    width: 100%;
+    height: var(--ui-height);
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 0 16px;
+    color: var(--text-primary);
+    transition: 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+}
+
+/* =========================================================
+   TABLE SYSTEM
+   ========================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    padding: 16px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--glass-border);
+    text-align: left;
+}
+
+tbody td {
+    padding: 18px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    display: inline-block;
+}
+
+.badge-success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.badge-warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.badge-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.badge-info {
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--accent);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 60px 0;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+}
+
+.legal-links a:hover {
+    color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom .container-fluid {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 30px;
+    }
+}
+
+/* =========================================================
+   CLINICAL UI COMPONENTS
+   ========================================================= */
+
+.criteria-list-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.criteria-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding-bottom: 8px;
+}
+
+.criteria-item:last-child {
+    border-bottom: none;
+}
+
+.criteria-item i {
+    margin-top: 4px;
+    font-size: 0.7rem;
+    color: var(--accent);
+}
+
+.italic {
+    font-style: italic;
+}

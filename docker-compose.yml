@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: meditrial_db
+    restart: always
+    environment:
+      POSTGRES_USER: medical_ai
+      POSTGRES_PASSWORD: production_password
+      POSTGRES_DB: clinical_trials
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: meditrial_ollama
+    restart: always
+    environment:
+      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_MAX_LOADED_MODELS=2
+    ports:
+      - "11435:11434" 
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    volumes:
+      - ollama_data:/root/.ollama
+
+  backend:
+    build:
+      context: ./backend 
+      dockerfile: Dockerfile
+    container_name: meditrial_app
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: medical_ai
+      POSTGRES_PASSWORD: production_password
+      POSTGRES_DB: clinical_trials
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      OLLAMA_HOST: http://meditrial_ollama:11434
+      FRONTEND_DIR: ./frontend
+      PORT: 3000
+    volumes:
+      - ./backend/app:/app/app
+      - ./frontend:/app/frontend
+      - ./data:/app/data
+    depends_on:
+      - postgres
+      - ollama
+
+volumes:
+  postgres_data:
+  ollama_data:

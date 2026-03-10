@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}MediTrial AI{% endblock %}</title>
+
+    <!-- Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body class="loaded"> <!-- 'loaded' class handles the page-loader in style.css -->
+
+    <!-- Loader -->
+    <clinical-loader></clinical-loader>
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <clinical-sidebar active="{% block active_page %}dashboard{% endblock %}"></clinical-sidebar>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container-fluid py-2">
+                {% block content %}{% endblock %}
+            </div>
+            
+            <clinical-footer></clinical-footer>
+        </main>
+    </div>
+
+    <!-- Core JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/components.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof api !== "undefined") {
+                api.verifySession();
+            }
+            // Simple logic to hide loader after bootstrap
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 300);
+        });
+    </script>
+
+    {% block extra_scripts %}{% endblock %}
+
+</body>
+</html>

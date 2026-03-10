@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MediTrial AI | Clinical Intelligence Accelerated</title>
+
+<meta name="description" content="Clinical Intelligence Accelerated. AI-powered clinical trial matching platform.">
+
+<!-- MDBootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<!-- Premium Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --medical-blue: #0D3B66;
+    --medical-blue-dark: #092A4A;
+    --accent-gradient: linear-gradient(90deg, #4F46E5, #3B82F6);
+    --bg-dark: #0B1020;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url("https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&w=1920&q=80") center center / cover no-repeat;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(11,16,32,0.92),
+        rgba(11,16,32,0.85)
+    );
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+/* ================= PREMIUM HEADLINE ================= */
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.8rem;
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.hero-title span {
+    display: block;
+    font-style: italic;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= SUBTEXT ================= */
+.hero-text {
+    font-size: 1.15rem;
+    margin-top: 20px;
+    opacity: 0.85;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+    background-color: var(--medical-blue);
+    border: none;
+    padding: 12px 35px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--medical-blue-dark);
+    transform: translateY(-2px);
+}
+
+/* ================= FEATURE CARDS ================= */
+.hero-feature-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 22px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    height: 100%;
+}
+
+.hero-feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+}
+
+.feature-icon {
+    font-size: 24px;
+    color: #60A5FA;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand text-white" href="/">
+            <i class="fas fa-certificate text-info me-2"></i>
+            MediTrial <span class="text-info">AI</span>
+        </a>
+        <div class="ms-auto">
+            <a href="/login" class="btn btn-link text-white text-decoration-none me-3">Login</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content container">
+
+        <!-- ===== MAIN TEXT ===== -->
+        <h1 class="hero-title">
+            Clinical Intelligence
+            <span>Accelerated.</span>
+        </h1>
+
+        <p class="hero-text">
+            AI-driven clinical trial matching with explainable confidence scoring,
+            secure infrastructure, and enterprise-ready audit transparency.
+        </p>
+
+        <div class="mt-4">
+            <a href="/signup" class="btn btn-primary rounded-pill">
+                Get Started <i class="fas fa-arrow-right ms-2 small"></i>
+            </a>
+        </div>
+
+        <!-- ===== THREE FEATURE CARDS ===== -->
+        <div class="row mt-4 g-4 justify-content-center">
+
+            <div class="col-md-4">
+                <div class="hero-feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h6 class="fw-bold mt-2">Instant AI Matching</h6>
+                    <p class="small opacity-75 mb-0">
+                        Evaluate inclusion and exclusion criteria within seconds using advanced NLP.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="hero-feature-card">
+                    <i class="fas fa-scale-balanced feature-icon"></i>
+                    <h6 class="fw-bold mt-3">Explainable Scoring</h6>
+                    <p class="small opacity-75 mb-0">
+                        Transparent eligibility confidence with clinical reasoning breakdown.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="hero-feature-card">
+                    <i class="fas fa-shield-halved feature-icon"></i>
+                    <h6 class="fw-bold mt-3">Secure Infrastructure</h6>
+                    <p class="small opacity-75 mb-0">
+                        Role-based access control, encrypted data processing, and logs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<clinical-footer></clinical-footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+<script src="/js/components.js"></script>
+
+</body>
+</html>

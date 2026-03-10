@@ -1,0 +1,91 @@
+﻿{% extends "partials/base.html" %}
+
+{% block title %}Clinical Matching Engine - MediTrial AI{% endblock %}
+{% block active_page %}matches{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="/css/matches.css">
+{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-5">
+    <div>
+        <h1 class="fw-bold mb-1 text-primary text-serif">Clinical Matching Engine</h1>
+        <p class="text-secondary small text-uppercase tracking-widest">
+            Protocol Engine &amp; Alignment Hub &nbsp;🛡️
+        </p>
+    </div>
+</div>
+
+<!-- Command Bar -->
+<div class="command-bar-custom">
+    <div class="input-box" onclick="document.getElementById('pdfInput').click()">
+        <i class="fas fa-file-pdf text-accent fa-lg"></i>
+        <div id="fileLabelContainer" class="d-flex align-items-center gap-2"><span id="fileLabel" class="text-secondary small">Extract Clinical Criteria from PDF</span></div>
+        <input type="file" id="pdfInput" class="d-none" accept=".pdf" onchange="handleFileUpload(this)">
+    </div>
+    <div class="input-box">
+        <i class="fas fa-database text-accent fa-lg"></i>
+        <select id="trialSelector" onchange="loadLibraryTrial(this)" class="bg-transparent border-0 text-primary small w-100"><option value="">Select Existing Library Trial...</option></select>
+    </div>
+    <button class="btn btn-primary px-5 py-3 rounded-pill" id="runPipelineBtn" onclick="runMatchingPipeline()" disabled><i class="fas fa-bolt me-2"></i> Run Alignment</button>
+</div>
+
+<!-- Criteria Panel (Restored) -->
+<div id="criteriaSection" class="glass-card mb-5 p-4" style="display:none; border: 1px solid rgba(14,165,233,0.15);">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <div class="small text-secondary fw-bold text-uppercase tracking-widest">Protocol Logic Review</div>
+            <div id="trialMetadataDisplay" class="mt-2" style="display:none;">
+                <span id="displayDrugName" class="badge bg-accent text-white me-2"></span>
+                <span id="displayCondition" class="text-secondary smaller italic"></span>
+            </div>
+        </div>
+        <button class="btn btn-sm btn-link text-accent" onclick="document.getElementById('criteriaSection').style.display='none'"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="drugDescriptionBox" class="mb-4 p-3 rounded bg-white bg-opacity-5 border border-white border-opacity-10 small text-secondary lh-base" style="display:none; border-left: 3px solid var(--accent) !important;">
+        <div class="smaller text-accent fw-bold text-uppercase mb-1">Mechanism / Rationale</div>
+        <span id="displayDrugDescription"></span>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <label class="smaller text-secondary text-uppercase mb-2 d-block">Inclusion Criteria</label>
+            <div id="incListContainer" class="criteria-list-box mb-2" style="display:none;"></div>
+            <textarea id="incArea" class="form-control bg-transparent text-white border-white border-opacity-10 small" rows="12" placeholder="Extracted inclusion rules..."></textarea>
+        </div>
+        <div class="col-md-6">
+            <label class="smaller text-secondary text-uppercase mb-2 d-block">Exclusion Criteria</label>
+            <div id="exclusionDisclaimer" class="smaller text-danger mb-2 opacity-75" style="display:none; font-style:italic;">
+                Note: All individuals meeting any of the following criteria at baseline will be excluded from study participation.
+            </div>
+            <div id="excListContainer" class="criteria-list-box mb-2" style="display:none;"></div>
+            <textarea id="excArea" class="form-control bg-transparent text-white border-white border-opacity-10 small" rows="12" placeholder="Extracted exclusion rules..."></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- Synthesis Panel -->
+<div id="synthesisSection" class="glass-card mb-5 p-0 overflow-hidden" style="display:none;">
+    <div class="row g-0">
+        <div class="col-md-3 border-end border-white border-opacity-10 p-4 bg-white bg-opacity-5">
+            <div class="small text-secondary fw-bold text-uppercase tracking-widest mb-3" style="font-size:0.6rem;">Fairness Audit</div>
+            <div id="fairnessMetric">
+                <div class="d-flex align-items-center mb-1"><span class="fs-2 fw-bold me-2 text-primary" id="fairnessValue">--</span><span class="badge badge-success">Optimal</span></div>
+                <div class="progress" style="height:6px;background:rgba(255,255,255,0.05);"><div class="progress-bar bg-accent" style="width:85%"></div></div>
+                <div class="smaller text-secondary mt-2">Diversity Parity Checked</div>
+            </div>
+        </div>
+        <div class="col-md-9 p-4">
+            <div class="small text-secondary fw-bold text-uppercase tracking-widest mb-3" style="font-size:0.6rem;">AI Clinical Synthesis</div>
+            <p id="llamaNarrative" class="fs-5 text-secondary mb-0 lh-lg" style="font-style:italic;">"Pipeline results categorized."</p>
+        </div>
+    </div>
+</div>
+
+<div class="grid-header"><div>Patient Identification</div><div>Probability</div><div>Clinical Reasoning Summary</div><div>Audit Trail</div><div class="text-end">Verification</div></div>
+<div id="gridBody"><div class="text-center py-5 mt-5" style="opacity:0.2;"><i class="fas fa-microscope fa-4x mb-4"></i><h5 class="fw-bold tracking-widest text-uppercase">Pipeline Idle</h5></div></div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="/js/matches.js"></script>
+{% endblock %}

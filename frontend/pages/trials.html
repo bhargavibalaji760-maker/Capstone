@@ -1,0 +1,266 @@
+﻿{% extends "partials/base.html" %}
+
+{% block title %}Protocol Registry - MediTrial AI{% endblock %}
+{% block active_page %}trials{% endblock %}
+
+{% block content %}
+<div class="topbar d-flex justify-content-between align-items-center mb-5">
+    <div>
+        <h1 class="fw-bold text-white mb-1 text-serif">Clinical Trials</h1>
+        <p class="text-secondary small text-uppercase tracking-widest">Protocol Management &amp; Global Registry Pipeline</p>
+    </div>
+    <button class="btn btn-primary fw-bold py-2 px-4 rounded-pill ripple shadow-sm" data-mdb-toggle="modal" data-mdb-target="#addTrialModal">
+        <i class="fas fa-plus me-2"></i> Register New Protocol
+    </button>
+</div>
+
+<!-- Protocol Lifecycle Stats -->
+<div class="row g-4 mb-5">
+    <div class="col-xl-3 col-md-6">
+        <div class="glass-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-secondary small text-uppercase fw-bold tracking-widest">Active Protocols</span>
+                <i class="fas fa-flask text-accent"></i>
+            </div>
+            <div class="d-flex align-items-baseline gap-2">
+                <h2 class="fw-bold text-white mb-0">42</h2>
+                <span class="text-info small px-2 py-1 rounded bg-info bg-opacity-10">Live Registry</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="glass-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-secondary small text-uppercase fw-bold tracking-widest">Phase III Ratio</span>
+                <i class="fas fa-vial text-accent"></i>
+            </div>
+            <div class="d-flex align-items-baseline gap-2">
+                <h2 class="fw-bold text-white mb-0">65%</h2>
+                <span class="text-emerald small"><i class="fas fa-check-double me-1"></i>Pivotal</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="glass-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-secondary small text-uppercase fw-bold tracking-widest">Recruitment Velocity</span>
+                <i class="fas fa-tachometer-alt text-accent"></i>
+            </div>
+            <div class="d-flex align-items-baseline gap-2">
+                <h2 class="fw-bold text-white mb-0">8.4x</h2>
+                <span class="text-secondary small">vs manual</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="glass-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-secondary small text-uppercase fw-bold tracking-widest">Validated Matches</span>
+                <i class="fas fa-link text-accent"></i>
+            </div>
+            <div class="d-flex align-items-baseline gap-2">
+                <h2 class="fw-bold text-white mb-0">3.2k</h2>
+                <span class="text-emerald small"><i class="fas fa-caret-up me-1"></i>0.4k</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card mb-4 p-3 shadow-3 px-4 bg-white bg-opacity-5">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+            <div class="form-outline">
+                <input type="text" id="trialSearch" class="form-control form-control-lg text-white" />
+                <label class="form-label text-dim" for="trialSearch"><i class="fas fa-search me-2"></i> Search trials, conditions, or phases...</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <select id="statusFilter" class="form-select form-select-lg">
+                <option value="">All Protocol Statuses</option>
+                <option value="Recruiting">Recruiting</option>
+                <option value="Active">Active</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select id="phaseSort" class="form-select form-select-lg">
+                <option value="">Sort by Pipeline Phase</option>
+                <option value="asc">Phase: I to IV</option>
+                <option value="desc">Phase: IV to I</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card mb-4 p-0 shadow-3 overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-dark-custom table-hover mb-0">
+            <thead class="bg-white bg-opacity-5">
+                <tr>
+                    <th class="ps-4 py-3 text-secondary smaller fw-bold text-uppercase tracking-widest">Protocol Identifier</th>
+                    <th class="py-3 text-secondary smaller fw-bold text-uppercase tracking-widest">Full Trial Title</th>
+                    <th class="py-3 text-secondary smaller fw-bold text-uppercase tracking-widest">Primary Indication</th>
+                    <th class="py-3 text-secondary smaller fw-bold text-uppercase tracking-widest text-center">Pipeline Phase</th>
+                    <th class="py-3 text-secondary smaller fw-bold text-uppercase tracking-widest text-center">Lifecycle Status</th>
+                    <th class="pe-4 py-3 text-secondary smaller fw-bold text-uppercase tracking-widest text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody id="trialTableBody">
+                <tr><td colspan="6" class="text-center py-5"><div class="spinner-grow text-accent"></div></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add Trial Modal -->
+<div class="modal fade" id="addTrialModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-card p-0 overflow-hidden" style="background: #0a0c10; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="modal-header border-white border-opacity-10 py-4 px-4 bg-white bg-opacity-5">
+                <div>
+                    <h5 class="modal-title fw-bold text-white mb-0"><i class="fas fa-file-medical text-accent me-2"></i> Register Clinical Protocol</h5>
+                    <p class="text-secondary small mb-0 mt-1">Onboard new investigational protocol into the matching engine.</p>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+
+                <!-- PDF Upload Section -->
+                <div class="mb-4 p-4 rounded-3" style="background: rgba(99,179,237,0.07); border: 1.5px dashed rgba(99,179,237,0.35);">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-file-pdf text-accent fa-lg me-2"></i>
+                        <div>
+                            <p class="fw-bold text-white mb-0 small">Auto-Extract from PDF Protocol</p>
+                            <p class="text-secondary mb-0" style="font-size:0.78rem;">Upload a clinical trial PDF and AI will extract criteria, age ranges, drug names and more automatically.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <label for="pdfUploadInput" class="btn btn-outline-accent btn-sm px-4 py-2 mb-0" style="cursor:pointer;">
+                            <i class="fas fa-upload me-2"></i>Choose PDF
+                        </label>
+                        <input type="file" id="pdfUploadInput" accept=".pdf" class="d-none" />
+                        <span id="pdfFileName" class="text-secondary small">No file selected</span>
+                        <button type="button" id="pdfUploadBtn" class="btn btn-accent btn-sm px-4 ms-auto" disabled>
+                            <i class="fas fa-brain me-2"></i>Extract & Auto-Fill
+                        </button>
+                    </div>
+                    <div id="pdfUploadStatus" class="mt-3" style="display:none;">
+                        <div class="progress mb-2" style="height:4px; background:rgba(255,255,255,0.1);">
+                            <div id="pdfProgressBar" class="progress-bar bg-accent progress-bar-striped progress-bar-animated" style="width:100%;"></div>
+                        </div>
+                        <p id="pdfStatusMsg" class="text-secondary small mb-0"><i class="fas fa-circle-notch fa-spin me-2"></i>Analysing protocol with LLaMA 3...</p>
+                    </div>
+                    <div id="pdfUploadSuccess" class="mt-2 small text-success" style="display:none;">
+                        <i class="fas fa-check-circle me-1"></i>Extraction complete — fields auto-populated below. Review and submit.
+                    </div>
+                    <div id="pdfUploadError" class="mt-2 small text-danger" style="display:none;"></div>
+                </div>
+
+                <form id="addTrialForm">
+                    <div class="form-outline mb-4">
+                        <input type="text" id="trial_title" class="form-control text-white" required />
+                        <label class="form-label text-secondary" for="trial_title">Protocol Title (e.g. Pembrolizumab in NSCLC)</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="trial_condition" class="form-control text-white" />
+                        <label class="form-label text-secondary" for="trial_condition">Primary Indication / Condition</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <textarea id="trial_desc" class="form-control text-white" rows="3"></textarea>
+                        <label class="form-label text-secondary" for="trial_desc">Brief Summary / Investigation Rationale</label>
+                    </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="form-outline">
+                                <input type="number" id="trial_min_age" class="form-control text-white" value="18" />
+                                <label class="form-label text-secondary" for="trial_min_age">Min Age</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-outline">
+                                <input type="number" id="trial_max_age" class="form-control text-white" value="80" />
+                                <label class="form-label text-secondary" for="trial_max_age">Max Age</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="trial_phase" class="form-select bg-dark text-white border-light border-opacity-20">
+                                <option value="Phase I">Phase I</option>
+                                <option value="Phase II">Phase II</option>
+                                <option value="Phase III" selected>Phase III</option>
+                                <option value="Phase IV">Phase IV</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="trial_status" class="form-select bg-dark text-white border-light border-opacity-20">
+                                <option value="Recruiting">Recruiting</option>
+                                <option value="Active">Active</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <textarea id="trial_inclusion" class="form-control text-white" rows="10"></textarea>
+                                <label class="form-label text-secondary" for="trial_inclusion">Clinical Inclusion Criteria (Raw)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-outline">
+                                <textarea id="trial_exclusion" class="form-control text-white" rows="10"></textarea>
+                                <label class="form-label text-secondary" for="trial_exclusion">Clinical Exclusion Criteria (Raw)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 mt-2">
+                        <button type="button" class="btn btn-secondary px-4" data-mdb-dismiss="modal">Discard</button>
+                        <button type="submit" class="btn btn-primary px-4 rounded-pill shadow-sm">Initialize Protocol Registry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Trial Modal -->
+<div class="modal fade" id="viewTrialModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content glass-card p-0 overflow-hidden" style="background: #0a0c10; border: 1px solid rgba(255,255,255,0.1);">
+            <div class="modal-header border-white border-opacity-10 py-4 px-4 bg-white bg-opacity-5">
+                <div>
+                    <h5 class="modal-title fw-bold text-white mb-0" id="viewTrialTitle">Protocol Details</h5>
+                    <p class="text-secondary small mb-0 mt-1" id="viewTrialCondition"></p>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div id="viewTrialDrugMetadata" class="mb-4">
+                    <span id="viewTrialDrug" class="badge bg-accent text-white me-2 p-2 px-3"></span>
+                    <p id="viewTrialDesc" class="text-secondary small mt-3 italic lh-lg"></p>
+                </div>
+                <hr class="border-white border-opacity-10 mb-4">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <label class="smaller text-secondary text-uppercase mb-2 d-block">Inclusion Criteria</label>
+                        <div id="viewTrialInclusion" class="criteria-list-box"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="smaller text-secondary text-uppercase mb-2 d-block">Exclusion Criteria</label>
+                        <div id="viewExclusionDisclaimer" class="smaller text-danger mb-2 opacity-75" style="display:none; font-style:italic;">
+                            * Individuals meeting any of these criteria at baseline will be excluded.
+                        </div>
+                        <div id="viewTrialExclusion" class="criteria-list-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="/js/trials.js"></script>
+{% endblock %}
